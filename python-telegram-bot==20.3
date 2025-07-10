@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sol-airdrop-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: WEBHOOK_URL
+        value: https://your-render-app.onrender.com/webhook
